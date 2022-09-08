@@ -1,0 +1,4 @@
+all:
+  children:
+    <group>:
+      hosts: <hostname>

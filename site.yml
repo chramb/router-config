@@ -1,0 +1,13 @@
+---
+- hosts: vm-router
+  become: true
+  become_method: doas
+  gather_facts: false
+
+  #roles:
+  tasks:
+    - name: install needed 
+      apk:
+        name: dhcp, bind, nftables, dhcpcd
+        state: present
+      # notify lbu ci
